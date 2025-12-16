@@ -9,18 +9,15 @@
 
 // Etape 2: JavaScript
 // -faire un fetch
-// -ajouter dans le JS la section logo 
-// -créer un p et ajouter le logo "nomCommercial" dans la section
-// -ajouter dans le JS la div hero-container 
-// -créer un h2 et ajouter "phraseAccroche" un button avec "texteAppelAction"
-// -Ajouter la div "card-avantages"
-// -créer une card qui contient titre avantage... et un h3 avec  "avantagesClients"
-// -Ajouter la div "card-produits"
-// -créer une card qui contient une img "image-url" , un h2 "nom" et un p "description"
-// -Ajouter la div "card-services"
-// -créer une card qui contient un h2 "nom" et un p "description"
-// -Ajouter la div "card-temoignages"
-// -créer une card qui contient un p  "prenom", un p "typeExperience", un p "commentaire" et un p "note"
+// -ajouter dans le JS la div logo, la div hero-container, la div "card-avantages", la div "card-produits"
+//  la div "card-services" et la div "card-temoignages" avec getelementbyID
+
+// -dans la div logo créer un p et ajouter le logo "nomCommercial"
+// -dans la div hero-container créer un h2 et ajouter "phraseAccroche" et un button avec "texteAppelAction"
+// -dans la div "card-avantages" créer une card avec foreach qui contient un h3 avec  "avantagesClients"
+// -dans  la div "card-produits"créer une card avec foreach qui contient une img "image-url" , un h2 "nom" et un p "description"
+// -dans  la div "card-services"créer une card avec foreach qui contient un h2 "nom" et un p "description"
+// -dans la div "card-temoignages"créer une card qui contient un p  "prenom", un p "typeExperience", un p "commentaire" et un p "note"
 // -ajouter ces éléments à la page
 
 
@@ -28,5 +25,13 @@ const apiURL= "https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c
 fetch(apiURL)
   .then(response => response.json())
   .then(data => { 
-    // code pour afficher les plats
+    const logocontainer= document.getElementById("logo");
+    const herocontainer= document.getElementById("hero-container");
+    const avantagescontainer= document.getElementById("card-avantages");
+    const produitscontainer= document.getElementById("card-produits");
+    const servicescontainer= document.getElementById("card-services");
+    const temoignagescontainer= document.getElementById("card-temoignages");
+
+    const logo = document.createElement("p");
+      logo.textContent = ;
   });
