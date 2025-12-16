@@ -17,10 +17,10 @@
 // -dans la div hero-container créer un h2 et ajouter "phraseAccroche" et un button avec "texteAppelAction"
 
 // -dans la div "card-avantages" créer une card avec foreach qui contient un h3 avec  "avantagesClients"
+
 // -dans  la div "card-produits"créer une card avec foreach qui contient une img "image-url" , un h2 "nom" et un p "description"
 // -dans  la div "card-services"créer une card avec foreach qui contient un h2 "nom" et un p "description"
-// -dans la div "card-temoignages"créer une card qui contient un p  "prenom", un p "typeExperience", un p "commentaire" et un p "note"
-// -ajouter ces éléments à la page
+// -dans la div "card-temoignages"créer une card avec foreach qui contient un p  "prenom", un p "typeExperience", un p "commentaire" et un p "note"
 
 
 const apiURL= "https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/patisserie.json"
@@ -45,17 +45,30 @@ fetch(apiURL)
     herocontainer.appendChild(accroche);
     herocontainer.appendChild(button);
 
-    const cardavantages= document.createElement("h3");
-    cardavantages.textContent= data.avantagesClients;
-    avantagescontainer.appendChild(cardavantages);
+    data.avantagesClients.forEach(avantage => {
+  const cardavantages = document.createElement("h3");
+  cardavantages.textContent = avantage;
+  avantagescontainer.appendChild(cardavantages);
+});
+    data.produits.forEach(produit => {
+        const imgproduits= document.createElement("img")
+        imgproduits.src= produit.image_url;
+        const nom= document.createElement("h2");
+        nom.textContent= produit.nom;
+        const description= document.createElement("p");
+        description.textContent= produit.description;
+        produitscontainer.appendChild(imgproduits);
+        produitscontainer.appendChild(nom);
+        produitscontainer.appendChild(description)
+    });
+data.services.forEach(service => {
+        const servicenom= document.createElement("h2");
+        servicenom.textContent= service.nom;
+        const servicedescription= document.createElement("p");
+        servicedescription.textContent= service.description;
+        servicescontainer.appendChild(servicenom);
+        servicescontainer.appendChild(servicedescription)
+    });
 
-// //     // const imgproduits= document.createElement ("img")
-// //     // imgproduits.src= data.produits.image_url;
-//     const titleproduits= document.createElement ("h2");
-//     titleproduits.textContent= data.produits;
-// //     const description= document.createElement("p");
-// //     description.textContent= data.produits.description;
-// //     // produitscontainer.appendChild(imgproduits);
-//     produitscontainer.appendChild(titleproduits);
-// //     produitscontainer.appendChild(description);
+
   });
