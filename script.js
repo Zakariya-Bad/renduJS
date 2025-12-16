@@ -13,7 +13,9 @@
 //  la div "card-services" et la div "card-temoignages" avec getelementbyID
 
 // -dans la div logo créer un p et ajouter le logo "nomCommercial"
+
 // -dans la div hero-container créer un h2 et ajouter "phraseAccroche" et un button avec "texteAppelAction"
+
 // -dans la div "card-avantages" créer une card avec foreach qui contient un h3 avec  "avantagesClients"
 // -dans  la div "card-produits"créer une card avec foreach qui contient une img "image-url" , un h2 "nom" et un p "description"
 // -dans  la div "card-services"créer une card avec foreach qui contient un h2 "nom" et un p "description"
@@ -33,5 +35,27 @@ fetch(apiURL)
     const temoignagescontainer= document.getElementById("card-temoignages");
 
     const logo = document.createElement("p");
-      logo.textContent = ;
+      logo.textContent = data.nomCommercial ;
+      logocontainer.appendChild(logo);
+
+    const accroche= document.createElement("h2");
+    accroche.textContent= data.phraseAccroche;
+    const button= document.createElement("button");
+    button.textContent= data.texteAppelAction;
+    herocontainer.appendChild(accroche);
+    herocontainer.appendChild(button);
+
+    const cardavantages= document.createElement("h3");
+    cardavantages.textContent= data.avantagesClients;
+    avantagescontainer.appendChild(cardavantages);
+
+// //     // const imgproduits= document.createElement ("img")
+// //     // imgproduits.src= data.produits.image_url;
+//     const titleproduits= document.createElement ("h2");
+//     titleproduits.textContent= data.produits;
+// //     const description= document.createElement("p");
+// //     description.textContent= data.produits.description;
+// //     // produitscontainer.appendChild(imgproduits);
+//     produitscontainer.appendChild(titleproduits);
+// //     produitscontainer.appendChild(description);
   });
