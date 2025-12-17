@@ -41,6 +41,7 @@ fetch(apiURL)
   const cardavantages = document.createElement("h3");
   cardavantages.textContent = avantage;
   avantagescontainer.appendChild(cardavantages);
+  cardavantages.classList.add("cardprod");
 });
     data.produits.forEach(produit => {
         const imgproduits= document.createElement("img")

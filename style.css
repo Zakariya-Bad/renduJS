@@ -1,17 +1,33 @@
-.img-size{
-    width: 200px;
-    border-radius: 10px;
-    corner-shape: bevel;
+* {
+  margin: 0;
+
 }
 
- .navigation {
+body {
+  line-height: 1.6;
+  color: black;
+  font-family: 'Arial', sans-serif; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  background-color: white;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.187);
+  background-color: rgba(255, 255, 255, 0.886);
+
+  position: fixed; 
+  width: 1170px; height: 40px;;
+  z-index: 1;
+  
 }
+
 
 .logo {
   font-size: 24px;
@@ -19,13 +35,10 @@
   color: #c0392b;
 }
 
+
 nav {
   display: flex;
   gap: 25px;
-}
-
-nav a {
-  font-size: 20px;
 }
 
 nav a:hover {
@@ -33,30 +46,97 @@ nav a:hover {
 }
 
 
-.btn{
-    background-color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 8px;
+button {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 6px;
 }
-.btn:active{
-    background-color: #c0392b;
+
+button:hover {
+  background-color: #d2837e;
 }
-a{
-    text-decoration: none;
-    color: black;
+
+.hero {
+  min-height: 100vh; 
+  background-image: url("patiss.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  color: rgb(252, 128, 70);
+}
+
+.hero h2 {
+  font-size: 42px;
+  max-width: 600px;
+  margin-bottom: 20px; 
+}
+
+.hero button {
+  width: fit-content;
+}
+
+main section {
+  padding: 80px 60px;
+}
+
+main section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 32px;
+}
+
+#card-avantages {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+#card-produits {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+#card-produits * {
+  max-width: 280px;
+  text-align: center;
+}
+
+.img-size {
+  width: 100%;
+  border-radius: 10px;
+  corner-shape: bevel;
+}
+
+.img-size:hover {
+  transform: scale(1.05);
 }
 
 
-.hero{
-background-image: url(patiss.png);
-background-size: cover;
-background-position: center;
-z-index: 1;
-
+footer {
+  background-color: black;
+  color: white;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
 }
-.hero-section{
-    width: 500px;
-    height: 400px;
+
+footer section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer a:hover {
+  color: #c0392b;
 }
 
