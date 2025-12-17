@@ -33,6 +33,7 @@ fetch(apiURL)
     accroche.textContent= data.phraseAccroche;
     const button= document.createElement("button");
     button.textContent= data.texteAppelAction;
+    button.classList.add("btn");
     herocontainer.appendChild(accroche);
     herocontainer.appendChild(button);
 
