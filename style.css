@@ -58,6 +58,10 @@ button {
 button:hover {
   background-color: #d2837e;
 }
+.imglogo{
+    width: 150px;
+    height: 135px;
+}
 
 .hero {
   min-height: 100vh; 
@@ -139,4 +143,3 @@ footer section {
 footer a:hover {
   color: #c0392b;
 }
-
