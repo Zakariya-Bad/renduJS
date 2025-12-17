@@ -1,0 +1,52 @@
+.img-size{
+    width: 200px;
+    border-radius: 10px;
+    corner-shape: bevel;
+}
+
+.navigation{
+    .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #c0392b;
+}
+
+}
+.btn{
+    background-color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.hero{
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQToGHjllxk1Kqd-wJUNZHzGag8-3vt3N1J-A&s");
+background-repeat: no-repeat;
+}
